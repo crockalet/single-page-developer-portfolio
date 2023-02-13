@@ -1,88 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Single-page developer portfolio</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
 
-  adamkeyes
+    <title>Frontend Mentor | Single-page developer portfolio</title>
+  </head>
+  <body>
+    <header>adamkeyes</header>
 
-  Nice to meet you! I'm Adam Keyes.
+    <main>
+      <section class="profile-card">
+        <h1>Nice to meet you! I'm <mark>Adam Keyes.</mark></h1>
+        <p>
+          Based in the UK, I'm a front-end developer passionate about building
+          accessible web apps that users love.
+        </p>
+        <button>Contact me</button>
+      </section>
 
-  Based in the UK, I'm a front-end developer passionate about 
-  building accessible web apps that users love.
+      <div class="divider"></div>
 
-  Contact me
+      <section class="xp-container">
+        <h2 style="display: none">Experience</h2>
+        <div class="xp-card">
+          <h3>HTML</h3>
+          <p>4 Years Experience</p>
+        </div>
+        <div class="xp-card">
+          <h3>CSS</h3>
+          <p>4 Years Experience</p>
+        </div>
+        <div class="xp-card">
+          <h3>JavaScript</h3>
+          <p>4 Years Experience</p>
+        </div>
+        <div class="xp-card">
+          <h3>Accessibility</h3>
+          <p>4 Years Experience</p>
+        </div>
+        <div class="xp-card">
+          <h3>React</h3>
+          <p>3 Years Experience</p>
+        </div>
+        <div class="xp-card">
+          <h3>Sass</h3>
+          <p>3 Years Experience</p>
+        </div>
+      </section>
 
-  HTML
-  4 Years Experience
+      <div class="divider"></div>
 
-  CSS
-  4 Years Experience
+      <section class="projects-container">
+        <header>
+          <h2>Projects</h2>
+          <button>Contact me</button>
+        </header>
 
-  JavaScript
-  4 Years Experience
+        <section class="projects">
+          <article class="project-card">
+            <h3>Design portfolio</h3>
 
-  Accessibility
-  4 Years Experience
+            <ul class="tech">
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
 
-  React
-  3 Years Experience
+            <nav>
+              <ul>
+                <li><a href="#">View project</a></li>
+                <li><a href="#">View code</a></li>
+              </ul>
+            </nav>
+          </article>
 
-  Sass
-  3 Years Experience
+          <article class="project-card">
+            <h3>E-learning landing page</h3>
 
-  Projects
+            <ul class="tech">
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
 
-  Contact me
+            <nav>
+              <ul>
+                <li><a href="#">View project</a></li>
+                <li><a href="#">View code</a></li>
+              </ul>
+            </nav>
+          </article>
 
-  Design portfolio
-  HTML CSS
-  View project
-  View code
+          <article class="project-card">
+            <h3>Todo web app</h3>
 
-  E-learning landing page
-  HTML CSS
-  View project
-  View code
+            <ul class="tech">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
 
-  Todo web app
-  HTML CSS JavaScript
-  View project
-  View code
+            <nav>
+              <ul>
+                <li><a href="#">View project</a></li>
+                <li><a href="#">View code</a></li>
+              </ul>
+            </nav>
+          </article>
 
-  Entertainment web app
-  HTML CSS JavaScript
-  View project
-  View code
+          <article class="project-card">
+            <h3>Entertainment web app</h3>
 
-  Memory Game
-  HTML CSS JavaScript
-  View project
-  View code
+            <ul class="tech">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
 
-  Art gallery showcase
-  HTML CSS JavaScript
-  View project
-  View code
+            <nav>
+              <ul>
+                <li><a href="#">View project</a></li>
+                <li><a href="#">View code</a></li>
+              </ul>
+            </nav>
+          </article>
 
-  Contact
+          <article class="project-card">
+            <h3>Memory Game</h3>
 
-  I would love to hear about your project and how I could help. Please 
-  fill in the form, and I’ll get back to you as soon as possible.
+            <ul class="tech">
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
 
-  Name
-  Email
-  Message
+            <nav>
+              <ul>
+                <li><a href="#">View project</a></li>
+                <li><a href="#">View code</a></li>
+              </ul>
+            </nav>
+          </article>
 
-  Send message
+          <article class="project-card">
+            <h3>Art gallery showcase</h3>
 
-  adamkeyes
+            <ul class="tech">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
 
-</body>
+            <nav>
+              <ul>
+                <li><a href="#">View project</a></li>
+                <li><a href="#">View code</a></li>
+              </ul>
+            </nav>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <div class="contact-container">
+        <h2>Contact</h2>
+        <p>
+          I would love to hear about your project and how I could help. Please
+          fill in the form, and I’ll get back to you as soon as possible.
+        </p>
+      </div>
+
+      <form>
+        <div class="input-container">
+          <input type="text" name="name" />
+          <label for="name">Name</label>
+        </div>
+        <div class="input-container">
+          <input type="email" name="email" />
+          <label for="email">Email</label>
+        </div>
+        <div class="input-container">
+          <textarea name="message" rows="3"></textarea>
+          <label for="message">Message</label>
+        </div>
+        <button type="submit">Send message</button>
+      </form>
+
+      <div class="divider"></div>
+
+      <div class="developer">
+        <p>adamkeyes</p>
+      </div>
+    </footer>
+  </body>
 </html>

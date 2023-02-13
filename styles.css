@@ -1,0 +1,54 @@
+@supports not (font-variation-settings: normal) {
+  @font-face {
+    font-family: SpaceGrotesk;
+    src: url("/assets/fonts/static/SpaceGrotesk-Medium.ttf");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: SpaceGrotesk;
+    src: url("/assets/fonts/static/SpaceGrotesk-Bold.ttf");
+    font-weight: bold;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "SpaceGrotesk";
+    src: url("/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
+        format("woff2 supports variations"),
+      url("/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
+        format("woff2-variations");
+    font-weight: 500 700;
+  }
+}
+
+:root {
+  --black: hsl(0, 0%, 8%);
+  --dark-gray: hsl(0, 0%, 14%);
+  --gray: hsl(0, 0%, 85%);
+  --green: hsl(153, 71%, 59%);
+  --danger: hsl(2, 100%, 68%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  background-color: var(--black);
+  color: var(--white);
+
+  font-size: 16px;
+  font-family: SpaceGrotesk, sans-serif;
+  font-weight: 500;
+}
