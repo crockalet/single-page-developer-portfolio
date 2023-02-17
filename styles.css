@@ -30,6 +30,20 @@
   --green: hsl(153, 71%, 59%);
   --danger: hsl(2, 100%, 68%);
   --white: hsl(0, 0%, 100%);
+
+  --heading-xl: 5.5rem;
+  --heading-xl-letter: -2.5px;
+  --heading-xl-line: 5.5rem;
+
+  --heading-l: 3rem;
+  --heading-l-letter: -1.5px;
+  --heading-l-line: 3.5rem;
+
+  --heading-m: 1.5rem;
+  --heading-m-line: 2rem;
+
+  --body: 1.125rem;
+  --body-line: 1.75rem;
 }
 
 *,
@@ -42,13 +56,151 @@
   margin: 0;
 }
 
+html {
+  font-size: 12px;
+}
+
 body {
   min-height: 100vh;
 
   background-color: var(--black);
   color: var(--white);
 
-  font-size: 16px;
+  font-size: var(--body);
+  line-height: var(--body-line);
   font-family: SpaceGrotesk, sans-serif;
   font-weight: 500;
+}
+
+main,
+header,
+footer {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+button {
+  border: none;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2.25px;
+
+  padding: 1rem;
+
+  transition: color 300ms ease-in-out;
+}
+
+button:hover {
+  color: var(--green);
+}
+
+button,
+mark {
+  background-color: transparent;
+  color: inherit;
+  position: relative;
+}
+
+mark::after,
+button::after {
+  content: "";
+
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+
+  height: 4px;
+  background-color: var(--green);
+}
+
+button::after {
+  height: 2px;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-card > h1 {
+  font-size: var(--heading-l);
+  letter-spacing: var(--heading-l-letter);
+  line-height: var(--heading-l-line);
+}
+
+.profile-card > p {
+  margin-top: 1.66rem;
+  color: var(--gray);
+}
+
+.profile-card > button {
+  margin-top: 1rem;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--white);
+}
+
+.xp-container {
+  padding-block: 3.3rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  row-gap: 2rem;
+}
+
+.xp-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  main,
+  header,
+  footer {
+    padding-inline: 1.9rem;
+  }
+
+  .profile-card {
+    text-align: left;
+  }
+
+  .profile-card > h1 {
+    font-size: var(--heading-xl);
+    letter-spacing: var(--heading-xl-letter);
+    line-height: var(--heading-xl-line);
+  }
+
+  .xp-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .xp-card {
+    align-items: flex-start;
+  }
+
+  .md-hidden {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 16px;
+  }
+
+  main,
+  header,
+  footer {
+    padding-inline: 2.5rem;
+  }
 }
