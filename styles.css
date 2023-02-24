@@ -57,7 +57,37 @@
 }
 
 html {
-  font-size: 12px;
+  font-size: 13px;
+}
+
+main,
+header,
+footer {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+header {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  padding-block: 1.5rem;
+  padding-block-end: 0;
+
+  row-gap: 1.5rem;
+}
+
+header .icons {
+  display: flex;
+
+  column-gap: 1.5rem;
+}
+
+header .icons > img {
+  width: 1.5rem;
 }
 
 body {
@@ -70,14 +100,6 @@ body {
   line-height: var(--body-line);
   font-family: SpaceGrotesk, sans-serif;
   font-weight: 500;
-}
-
-main,
-header,
-footer {
-  max-width: 1280px;
-  margin-inline: auto;
-  padding-inline: 1rem;
 }
 
 button {
@@ -121,21 +143,30 @@ button::after {
 
 .profile-card {
   text-align: center;
+
+  position: relative;
+  top: -6.2rem;
+}
+
+.profile-card > img {
+  width: 12rem;
 }
 
 .profile-card > h1 {
   font-size: var(--heading-l);
   letter-spacing: var(--heading-l-letter);
   line-height: var(--heading-l-line);
+
+  margin-block-start: 3rem;
 }
 
 .profile-card > p {
-  margin-top: 1.66rem;
   color: var(--gray);
 }
 
-.profile-card > button {
-  margin-top: 1rem;
+.profile-card > button,
+.profile-card > p {
+  margin-block-start: 1.8rem;
 }
 
 .divider {
@@ -160,10 +191,6 @@ button::after {
 }
 
 @media screen and (min-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-
   main,
   header,
   footer {
