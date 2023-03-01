@@ -14,7 +14,7 @@
 
     <title>Frontend Mentor | Single-page developer portfolio</title>
   </head>
-  <body>
+  <body class="text-body">
     <header>
       <p>adamkeyes</p>
       <div class="icons">
@@ -31,7 +31,7 @@
     <main>
       <section class="profile-card">
         <img src="/assets/images/image-profile-mobile.webp" alt="Profile" />
-        <h1>Nice to meet you! I'm <mark>Adam Keyes.</mark></h1>
+        <h1 class="text-lg">Nice to meet you! I'm <mark>Adam Keyes.</mark></h1>
         <p>
           Based in the UK, I'm a front-end developer passionate about building
           accessible web apps that users love.
@@ -45,27 +45,27 @@
         <h2 style="display: none">Experience</h2>
 
         <div class="xp-card">
-          <h3>HTML</h3>
+          <h3 class="text-lg">HTML</h3>
           <p>4 Years Experience</p>
         </div>
         <div class="xp-card">
-          <h3>CSS</h3>
+          <h3 class="text-lg">CSS</h3>
           <p>4 Years Experience</p>
         </div>
         <div class="xp-card">
-          <h3>JavaScript</h3>
+          <h3 class="text-lg">JavaScript</h3>
           <p>4 Years Experience</p>
         </div>
         <div class="xp-card">
-          <h3>Accessibility</h3>
+          <h3 class="text-lg">Accessibility</h3>
           <p>4 Years Experience</p>
         </div>
         <div class="xp-card">
-          <h3>React</h3>
+          <h3 class="text-lg">React</h3>
           <p>3 Years Experience</p>
         </div>
         <div class="xp-card">
-          <h3>Sass</h3>
+          <h3 class="text-lg">Sass</h3>
           <p>3 Years Experience</p>
         </div>
       </section>
@@ -74,45 +74,89 @@
 
       <section class="projects-container">
         <header>
-          <h2>Projects</h2>
+          <h2 class="text-xl">Projects</h2>
           <button>Contact me</button>
         </header>
 
         <section class="projects">
           <article class="project-card">
-            <h3>Design portfolio</h3>
+            <div class="project-image">
+              <img
+                srcset="
+                  /assets/images/thumbnail-project-1-small.webp  686w,
+                  /assets/images/thumbnail-project-1-large.webp 1080w
+                "
+                src="/assets/images/thumbnail-project-1-large.webp"
+                alt="design portfolio"
+              />
+
+              <nav class="links">
+                <a href="#">View project</a>
+                <a href="#">View code</a>
+              </nav>
+            </div>
+
+            <h3 class="text-m">Design portfolio</h3>
 
             <ul class="tech">
               <li>HTML</li>
               <li>CSS</li>
             </ul>
 
-            <nav>
-              <ul>
-                <li><a href="#">View project</a></li>
-                <li><a href="#">View code</a></li>
-              </ul>
+            <nav class="links">
+              <a href="#">View project</a>
+              <a href="#">View code</a>
             </nav>
           </article>
 
           <article class="project-card">
-            <h3>E-learning landing page</h3>
+            <div class="project-image">
+              <img
+                srcset="
+                  /assets/images/thumbnail-project-2-small.webp  686w,
+                  /assets/images/thumbnail-project-2-large.webp 1080w
+                "
+                src="/assets/images/thumbnail-project-2-large.webp"
+                alt="e-learning landing page"
+              />
+
+              <nav class="links">
+                <a href="#">View project</a>
+                <a href="#">View code</a>
+              </nav>
+            </div>
+
+            <h3 class="text-m">E-learning landing page</h3>
 
             <ul class="tech">
               <li>HTML</li>
               <li>CSS</li>
             </ul>
 
-            <nav>
-              <ul>
-                <li><a href="#">View project</a></li>
-                <li><a href="#">View code</a></li>
-              </ul>
+            <nav class="links">
+              <a href="#">View project</a>
+              <a href="#">View code</a>
             </nav>
           </article>
 
           <article class="project-card">
-            <h3>Todo web app</h3>
+            <div class="project-image">
+              <img
+                srcset="
+                  /assets/images/thumbnail-project-3-small.webp  686w,
+                  /assets/images/thumbnail-project-3-large.webp 1080w
+                "
+                src="/assets/images/thumbnail-project-3-large.webp"
+                alt="todo web app"
+              />
+
+              <nav class="links">
+                <a href="#">View project</a>
+                <a href="#">View code</a>
+              </nav>
+            </div>
+
+            <h3 class="text-m">Todo web app</h3>
 
             <ul class="tech">
               <li>HTML</li>
@@ -120,16 +164,30 @@
               <li>JavaScript</li>
             </ul>
 
-            <nav>
-              <ul>
-                <li><a href="#">View project</a></li>
-                <li><a href="#">View code</a></li>
-              </ul>
+            <nav class="links">
+              <a href="#">View project</a>
+              <a href="#">View code</a>
             </nav>
           </article>
 
           <article class="project-card">
-            <h3>Entertainment web app</h3>
+            <div class="project-image">
+              <img
+                srcset="
+                  /assets/images/thumbnail-project-4-small.webp  686w,
+                  /assets/images/thumbnail-project-4-large.webp 1080w
+                "
+                src="/assets/images/thumbnail-project-4-large.webp"
+                alt="entertainment web app"
+              />
+
+              <nav class="links">
+                <a href="#">View project</a>
+                <a href="#">View code</a>
+              </nav>
+            </div>
+
+            <h3 class="text-m">Entertainment web app</h3>
 
             <ul class="tech">
               <li>HTML</li>
@@ -137,32 +195,60 @@
               <li>JavaScript</li>
             </ul>
 
-            <nav>
-              <ul>
-                <li><a href="#">View project</a></li>
-                <li><a href="#">View code</a></li>
-              </ul>
+            <nav class="links">
+              <a href="#">View project</a>
+              <a href="#">View code</a>
             </nav>
           </article>
 
           <article class="project-card">
-            <h3>Memory Game</h3>
+            <div class="project-image">
+              <img
+                srcset="
+                  /assets/images/thumbnail-project-5-small.webp  686w,
+                  /assets/images/thumbnail-project-5-large.webp 1080w
+                "
+                src="/assets/images/thumbnail-project-5-large.webp"
+                alt="memory game"
+              />
+
+              <nav class="links">
+                <a href="#">View project</a>
+                <a href="#">View code</a>
+              </nav>
+            </div>
+
+            <h3 class="text-m">Memory Game</h3>
 
             <ul class="tech">
               <li>HTML</li>
               <li>CSS</li>
             </ul>
 
-            <nav>
-              <ul>
-                <li><a href="#">View project</a></li>
-                <li><a href="#">View code</a></li>
-              </ul>
+            <nav class="links">
+              <a href="#">View project</a>
+              <a href="#">View code</a>
             </nav>
           </article>
 
           <article class="project-card">
-            <h3>Art gallery showcase</h3>
+            <div class="project-image">
+              <img
+                srcset="
+                  /assets/images/thumbnail-project-6-small.webp  686w,
+                  /assets/images/thumbnail-project-6-large.webp 1080w
+                "
+                src="/assets/images/thumbnail-project-6-large.webp"
+                alt="art gallery showcase"
+              />
+
+              <nav class="links">
+                <a href="#">View project</a>
+                <a href="#">View code</a>
+              </nav>
+            </div>
+
+            <h3 class="text-m">Art gallery showcase</h3>
 
             <ul class="tech">
               <li>HTML</li>
@@ -170,11 +256,9 @@
               <li>JavaScript</li>
             </ul>
 
-            <nav>
-              <ul>
-                <li><a href="#">View project</a></li>
-                <li><a href="#">View code</a></li>
-              </ul>
+            <nav class="links">
+              <a href="#">View project</a>
+              <a href="#">View code</a>
             </nav>
           </article>
         </section>
