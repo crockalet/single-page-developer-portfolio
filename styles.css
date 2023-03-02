@@ -181,14 +181,14 @@ button::after,
 
   position: relative;
   top: calc(-1 * var(--top-offset));
-
-  z-index: -1;
 }
 
 .profile-image {
   width: 12rem;
 
   margin-inline: auto;
+
+  z-index: -1;
 }
 
 .intro > h1 {
