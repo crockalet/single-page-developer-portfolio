@@ -24,6 +24,7 @@
 }
 
 :root {
+  --font-space-grotesk: SpaceGrotesk, sans-serif;
   --black: hsl(0, 0%, 8%);
   --dark-gray: hsl(0, 0%, 14%);
   --gray: hsl(0, 0%, 85%);
@@ -33,7 +34,7 @@
 }
 
 .text-body {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.75rem;
 }
 
@@ -85,7 +86,7 @@ html {
 
 main,
 header,
-footer {
+footer .content {
   max-width: 1280px;
   margin-inline: auto;
   padding-inline: 1rem;
@@ -103,13 +104,15 @@ header {
   row-gap: 1.5rem;
 }
 
-header .icons {
+header .icons,
+footer .icons {
   display: flex;
 
   column-gap: 1.5rem;
 }
 
-header .icons > img {
+header .icons > img,
+footer .icons > img {
   width: 1.5rem;
 }
 
@@ -119,7 +122,7 @@ body {
   background-color: var(--black);
   color: var(--white);
 
-  font-family: SpaceGrotesk, sans-serif;
+  font-family: var(--font-space-grotesk);
   font-weight: 500;
 }
 
@@ -155,11 +158,16 @@ button::after,
   content: "";
 
   position: absolute;
-  inset-inline: 0;
+  inset-inline: 1.1rem;
   bottom: 0;
 
   height: 4px;
   background-color: var(--green);
+}
+
+mark::after {
+  inset-inline: 0;
+  inset-inline-end: 0.8rem;
 }
 
 button::after,
@@ -197,7 +205,7 @@ button::after,
 }
 
 .xp-container {
-  padding-block: 3.3rem;
+  margin-block: 3.3rem;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -216,14 +224,20 @@ button::after,
   color: var(--gray);
 }
 
+.projects-container {
+  margin-block: 6rem;
+}
+
 .projects-container > header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  padding: 0;
 }
 
 .projects {
-  margin-top: 3rem;
+  margin-block: 3rem;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -283,10 +297,107 @@ button::after,
   display: none;
 }
 
+footer {
+  background-color: var(--dark-gray);
+  padding-block-start: 5rem;
+  margin-block-start: 6rem;
+}
+
+.contact-container {
+  display: flex;
+
+  align-items: center;
+
+  text-align: center;
+
+  flex-direction: column;
+
+  padding-block-end: 5rem;
+}
+
+.contact-container > * {
+  max-width: 34rem;
+  width: 100%;
+}
+
+.contact-container > div > p {
+  margin-block: 1.5rem;
+}
+
+.contact-container > form {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 2.5rem;
+}
+
+.developer {
+  display: flex;
+
+  flex-direction: column;
+
+  padding-block-start: 3rem;
+  padding-block-end: 4.5rem;
+
+  justify-content: space-between;
+  align-items: center;
+
+  row-gap: 1.5rem;
+}
+
+.input-container > label {
+  display: none;
+}
+
+form > button[type="submit"] {
+  margin-left: auto;
+}
+
+input,
+textarea {
+  width: 100%;
+
+  color: var(--white);
+  background-color: transparent;
+
+  border: none;
+
+  padding-inline: 1.2rem;
+  padding-block-end: 1.5rem;
+
+  border-block-end: 1px solid var(--white);
+
+  caret-color: var(--white);
+}
+
+input,
+input::placeholder,
+textarea,
+textarea::placeholder {
+  font-family: var(--font-space-grotesk);
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--dark-gray) inset !important;
+  -webkit-text-fill-color: var(--white) !important;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
 @media screen and (min-width: 768px) {
   main,
   header,
-  footer {
+  footer .content {
     padding-inline: 1.9rem;
   }
 
@@ -310,8 +421,25 @@ button::after,
     display: none;
   }
 
+  .md-text-xl {
+    font-size: 5.5rem;
+    letter-spacing: -2.5px;
+    line-height: 5.5rem;
+  }
+
   .projects {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-container > div > p {
+    margin-block-end: 3.5rem;
+  }
+
+  .developer {
+    flex-direction: row;
+
+    padding-block-start: 1.75rem;
+    padding-block-end: 2.5rem;
   }
 }
 
@@ -322,8 +450,8 @@ button::after,
 
   main,
   header,
-  footer {
-    padding-inline: 2.5rem;
+  footer .content {
+    padding-inline: 5.25rem;
   }
 
   .projects-container > header {
@@ -347,5 +475,35 @@ button::after,
   .project-card:focus > .project-image > .links {
     opacity: 1;
     pointer-events: all;
+  }
+
+  .contact-container {
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 14rem;
+
+    text-align: left;
+  }
+
+  .contact-container > div > p {
+    margin-block-start: 2.125rem;
+  }
+
+  .developer {
+    padding-block-start: 3rem;
+    padding-block-end: 6rem;
+  }
+
+  input,
+  input::placeholder,
+  textarea,
+  textarea::placeholder {
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    padding-inline: 1rem;
+    padding-block-end: 1rem;
   }
 }

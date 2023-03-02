@@ -14,6 +14,7 @@
 
     <title>Frontend Mentor | Single-page developer portfolio</title>
   </head>
+
   <body class="text-body">
     <header>
       <p>adamkeyes</p>
@@ -74,7 +75,7 @@
 
       <section class="projects-container">
         <header>
-          <h2 class="text-xl">Projects</h2>
+          <h2 class="text-lg md-text-xl">Projects</h2>
           <button>Contact me</button>
         </header>
 
@@ -266,34 +267,59 @@
     </main>
 
     <footer>
-      <div class="contact-container">
-        <h2>Contact</h2>
-        <p>
-          I would love to hear about your project and how I could help. Please
-          fill in the form, and I’ll get back to you as soon as possible.
-        </p>
-      </div>
+      <div class="content">
+        <div class="contact-container">
+          <div>
+            <h2 class="text-lg md-text-xl">Contact</h2>
+            <p>
+              I would love to hear about your project and how I could help.
+              Please fill in the form, and I’ll get back to you as soon as
+              possible.
+            </p>
+          </div>
 
-      <form>
-        <div class="input-container">
-          <input type="text" name="name" />
-          <label for="name">Name</label>
+          <form>
+            <div class="input-container">
+              <input type="text" name="name" placeholder="Name" />
+              <label for="name">Name</label>
+            </div>
+            <div class="input-container">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                class="error"
+              />
+              <label for="email">Email</label>
+            </div>
+            <div class="input-container">
+              <textarea
+                name="message"
+                rows="3"
+                placeholder="Message"
+                class="error"
+              ></textarea>
+              <label for="message">Message</label>
+            </div>
+            <button type="submit">Send message</button>
+          </form>
         </div>
-        <div class="input-container">
-          <input type="email" name="email" />
-          <label for="email">Email</label>
-        </div>
-        <div class="input-container">
-          <textarea name="message" rows="3"></textarea>
-          <label for="message">Message</label>
-        </div>
-        <button type="submit">Send message</button>
-      </form>
 
-      <div class="divider"></div>
+        <div class="divider"></div>
 
-      <div class="developer">
-        <p>adamkeyes</p>
+        <div class="developer">
+          <p class="text-m">adamkeyes</p>
+
+          <div class="icons">
+            <img src="/assets/images/icon-github.svg" alt="Github" />
+            <img
+              src="/assets/images/icon-frontend-mentor.svg"
+              alt="Frontend Mentor"
+            />
+            <img src="/assets/images/icon-linkedin.svg" alt="LinkedIn" />
+            <img src="/assets/images/icon-twitter.svg" alt="Twitter" />
+          </div>
+        </div>
       </div>
     </footer>
   </body>
