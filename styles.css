@@ -176,26 +176,37 @@ button::after,
 }
 
 .profile-card {
+  --top-offset: 6.2rem;
   text-align: center;
 
   position: relative;
-  top: -6.2rem;
+  top: calc(-1 * var(--top-offset));
+
+  z-index: -1;
 }
 
-.profile-card > img {
+.profile-image {
   width: 12rem;
+
+  margin-inline: auto;
 }
 
-.profile-card > h1 {
+.intro > h1 {
   margin-block-start: 3rem;
 }
 
-.profile-card > p {
+.intro > h1 > mark {
+  display: inline-block;
+
+  width: max-content;
+}
+
+.intro > p {
   color: var(--gray);
 }
 
-.profile-card > button,
-.profile-card > p {
+.intro > button,
+.intro > p {
   margin-block-start: 1.8rem;
 }
 
@@ -394,6 +405,10 @@ textarea:focus {
   outline: none;
 }
 
+.sm-hidden {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   main,
   header,
@@ -401,12 +416,90 @@ textarea:focus {
     padding-inline: 1.9rem;
   }
 
+  header {
+    flex-direction: row;
+
+    justify-content: space-between;
+  }
+
+  mark::after {
+    height: 6px;
+  }
+
   .projects-container > header {
     padding-inline: 0;
   }
 
   .profile-card {
+    --image-width: 24.75rem;
     text-align: left;
+
+    display: grid;
+
+    grid-template-columns: 1fr calc(var(--image-width) - 5rem);
+  }
+
+  .sm-hidden {
+    display: block;
+  }
+
+  .profile-image {
+    order: 1;
+
+    position: relative;
+
+    margin: 0;
+
+    width: 100%;
+    aspect-ratio: 0.43;
+  }
+
+  .profile-image > img {
+    width: var(--image-width);
+
+    position: absolute;
+
+    inset-inline-end: -1.9rem;
+    inset-block-start: 0;
+  }
+
+  .intro {
+    position: relative;
+
+    margin-top: auto;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .intro > h1 {
+    font-size: 5.5rem;
+    line-height: 6.6rem;
+    letter-spacing: -1px;
+
+    margin-block-start: 0;
+  }
+
+  .intro > p {
+    font-size: 1.25rem;
+    line-height: 2.15rem;
+    letter-spacing: 0;
+
+    max-width: 34rem;
+
+    margin-block-start: 4.5rem;
+  }
+
+  .intro > button {
+    margin-block-start: 2.5rem;
+    padding-inline: 0;
+  }
+
+  .intro > button::after {
+    inset-inline: 0;
   }
 
   .xp-container {

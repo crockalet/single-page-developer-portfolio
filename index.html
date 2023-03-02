@@ -31,13 +31,35 @@
 
     <main>
       <section class="profile-card">
-        <img src="/assets/images/image-profile-mobile.webp" alt="Profile" />
-        <h1 class="text-lg">Nice to meet you! I'm <mark>Adam Keyes.</mark></h1>
-        <p>
-          Based in the UK, I'm a front-end developer passionate about building
-          accessible web apps that users love.
-        </p>
-        <button>Contact me</button>
+        <div class="profile-image">
+          <img
+            src="/assets/images/image-profile-mobile.webp"
+            alt="Profile"
+            class="md-hidden"
+          />
+          <img
+            src="/assets/images/image-profile-tablet.webp"
+            srcset="
+              /assets/images/image-profile-tablet.webp  646w,
+              /assets/images/image-profile-desktop.webp 890w
+            "
+            sizes="322px, (min-width: 1280px) 445px"
+            alt="Profile"
+            class="sm-hidden"
+          />
+        </div>
+
+        <div class="intro">
+          <h1 class="text-lg">
+            Nice to <br class="sm-hidden" />meet you! I'm
+            <mark>Adam Keyes.</mark>
+          </h1>
+          <p>
+            Based in the UK, I'm a front-end developer passionate about building
+            accessible web apps that users love.
+          </p>
+          <button>Contact me</button>
+        </div>
       </section>
 
       <div class="divider"></div>
