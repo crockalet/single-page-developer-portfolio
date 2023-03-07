@@ -104,6 +104,11 @@ header {
   row-gap: 1.5rem;
 }
 
+header > p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 header .icons,
 footer .icons {
   display: flex;
@@ -547,6 +552,20 @@ textarea:focus {
     padding-inline: 5.25rem;
   }
 
+  header .icons {
+    padding-inline: 2rem;
+  }
+
+  .profile-card {
+    --image-width: 28rem;
+  }
+
+  .profile-image > img {
+    width: var(--image-width);
+
+    inset-inline-end: 0;
+  }
+
   .projects-container > header {
     padding-inline: 0;
   }
@@ -598,5 +617,9 @@ textarea:focus {
   textarea {
     padding-inline: 1rem;
     padding-block-end: 1rem;
+  }
+
+  .xl-hidden {
+    display: none;
   }
 }

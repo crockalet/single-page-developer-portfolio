@@ -11,6 +11,7 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="form.js"></script>
 
     <title>Frontend Mentor | Single-page developer portfolio</title>
   </head>
@@ -51,7 +52,7 @@
 
         <div class="intro">
           <h1 class="text-lg">
-            Nice to <br class="sm-hidden" />meet you! I'm
+            Nice to <br class="sm-hidden xl-hidden" />meet you! I'm
             <mark>Adam Keyes.</mark>
           </h1>
           <p>
@@ -300,7 +301,7 @@
             </p>
           </div>
 
-          <form>
+          <form onsubmit="return false;">
             <div class="input-container">
               <input type="text" name="name" placeholder="Name" />
               <label for="name">Name</label>
@@ -323,7 +324,9 @@
               ></textarea>
               <label for="message">Message</label>
             </div>
-            <button type="submit">Send message</button>
+            <button type="submit" onclick="validateContactForm()">
+              Send message
+            </button>
           </form>
         </div>
 
