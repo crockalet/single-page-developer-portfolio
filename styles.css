@@ -92,6 +92,11 @@ footer .content {
   padding-inline: 1rem;
 }
 
+main,
+header {
+  position: relative;
+}
+
 header {
   display: flex;
 
@@ -102,6 +107,8 @@ header {
   padding-block-end: 0;
 
   row-gap: 1.5rem;
+
+  z-index: 1;
 }
 
 header > p {
@@ -116,9 +123,16 @@ footer .icons {
   column-gap: 1.5rem;
 }
 
-header .icons > img,
-footer .icons > img {
+a:visited {
+  color: inherit;
+}
+
+header .icons a,
+footer .icons a {
   width: 1.5rem;
+
+  aspect-ratio: 1;
+  line-height: 0;
 }
 
 body {
@@ -145,7 +159,9 @@ button,
 }
 
 button:hover,
-.links > a:hover {
+.links > a:hover,
+.icons > a:hover {
+  cursor: pointer;
   color: var(--green);
 }
 

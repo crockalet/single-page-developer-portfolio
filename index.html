@@ -11,7 +11,9 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="form.js"></script>
+
+    <script src="/assets/js/form.js"></script>
+    <script src="/assets/js/svg-inject.min.js"></script>
 
     <title>Frontend Mentor | Single-page developer portfolio</title>
   </head>
@@ -20,13 +22,34 @@
     <header>
       <p>adamkeyes</p>
       <div class="icons">
-        <img src="/assets/images/icon-github.svg" alt="Github" />
-        <img
-          src="/assets/images/icon-frontend-mentor.svg"
-          alt="Frontend Mentor"
-        />
-        <img src="/assets/images/icon-linkedin.svg" alt="LinkedIn" />
-        <img src="/assets/images/icon-twitter.svg" alt="Twitter" />
+        <a href="#">
+          <img
+            src="/assets/images/icon-github.svg"
+            alt="github"
+            onload="SVGInject(this)"
+          />
+        </a>
+        <a href="#">
+          <img
+            src="/assets/images/icon-frontend-mentor.svg"
+            alt="front-end mentor"
+            onload="SVGInject(this)"
+          />
+        </a>
+        <a href="#">
+          <img
+            src="/assets/images/icon-linkedin.svg"
+            alt="linkedin"
+            onload="SVGInject(this)"
+          />
+        </a>
+        <a href="#">
+          <img
+            src="/assets/images/icon-twitter.svg"
+            alt="twitter"
+            onload="SVGInject(this)"
+          />
+        </a>
       </div>
     </header>
 
@@ -336,13 +359,34 @@
           <p class="text-m">adamkeyes</p>
 
           <div class="icons">
-            <img src="/assets/images/icon-github.svg" alt="Github" />
-            <img
-              src="/assets/images/icon-frontend-mentor.svg"
-              alt="Frontend Mentor"
-            />
-            <img src="/assets/images/icon-linkedin.svg" alt="LinkedIn" />
-            <img src="/assets/images/icon-twitter.svg" alt="Twitter" />
+            <a>
+              <img
+                src="/assets/images/icon-github.svg"
+                alt="github"
+                onload="SVGInject(this)"
+              />
+            </a>
+            <a>
+              <img
+                src="/assets/images/icon-frontend-mentor.svg"
+                alt="front-end mentor"
+                onload="SVGInject(this)"
+              />
+            </a>
+            <a>
+              <img
+                src="/assets/images/icon-linkedin.svg"
+                alt="linkedin"
+                onload="SVGInject(this)"
+              />
+            </a>
+            <a>
+              <img
+                src="/assets/images/icon-twitter.svg"
+                alt="twitter"
+                onload="SVGInject(this)"
+              />
+            </a>
           </div>
         </div>
       </div>
