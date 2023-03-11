@@ -18,7 +18,7 @@
     <title>Frontend Mentor | Single-page developer portfolio</title>
   </head>
 
-  <body class="text-body">
+  <body class="text-body" style="overflow-x: hidden">
     <header>
       <p>adamkeyes</p>
       <div class="icons">
@@ -51,11 +51,34 @@
           />
         </a>
       </div>
+
+      <img
+        aria-hidden="true"
+        src="assets/images/pattern-rings.svg"
+        class="rings sm-hidden"
+        onload="SVGInject(this)"
+        style="z-index: -2"
+      />
     </header>
 
     <main>
       <section class="profile-card">
+        <img
+          aria-hidden="true"
+          src="assets/images/pattern-rings.svg"
+          class="rings md-hidden"
+          onload="SVGInject(this)"
+          style="z-index: -2"
+        />
+
         <div class="profile-image">
+          <div class="circle" style="z-index: 1">
+            <img
+              aria-hidden="true"
+              src="assets/images/pattern-circle.svg"
+              onload="SVGInject(this)"
+            />
+          </div>
           <img
             src="/assets/images/image-profile-mobile.webp"
             alt="Profile"
@@ -114,6 +137,24 @@
         <div class="xp-card">
           <h3 class="text-lg">Sass</h3>
           <p>3 Years Experience</p>
+        </div>
+
+        <div class="rings lg-hidden" style="z-index: -1">
+          <img
+            aria-hidden="true"
+            src="assets/images/pattern-rings.svg"
+            onload="SVGInject(this)"
+          />
+        </div>
+
+        <div class="rings-container sm-hidden md-hidden" style="z-index: -1">
+          <div class="rings">
+            <img
+              aria-hidden="true"
+              src="assets/images/pattern-rings.svg"
+              onload="SVGInject(this)"
+            />
+          </div>
         </div>
       </section>
 

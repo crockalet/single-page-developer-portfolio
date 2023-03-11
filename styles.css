@@ -196,6 +196,20 @@ button::after,
   height: 2px;
 }
 
+.rings {
+  opacity: 0.45;
+}
+
+header .rings,
+.profile-card .rings {
+  position: absolute;
+
+  width: 530px;
+
+  bottom: calc((2.5rem + 129px) * -1);
+  left: -342px;
+}
+
 .profile-card {
   --top-offset: 6.2rem;
   text-align: center;
@@ -204,12 +218,38 @@ button::after,
   top: calc(-1 * var(--top-offset));
 }
 
-.profile-image {
-  width: 12rem;
+.profile-card .rings {
+  top: calc(2rem + var(--top-offset));
+  bottom: auto;
 
-  margin-inline: auto;
+  z-index: -5;
+}
+
+.profile-image > .circle {
+  position: absolute;
+
+  bottom: 0;
+  right: -1rem;
+
+  width: 64px;
+  height: 129px;
+
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
 
   z-index: -1;
+
+  position: relative;
+}
+
+.profile-image > img {
+  width: 12rem;
 }
 
 .intro > h1 {
@@ -244,6 +284,18 @@ button::after,
   grid-template-rows: auto;
 
   row-gap: 2rem;
+
+  position: relative;
+}
+
+.xp-container > .rings {
+  position: absolute;
+
+  bottom: -100px;
+  right: -1rem;
+
+  width: 186px;
+  overflow: hidden;
 }
 
 .xp-card {
@@ -484,10 +536,12 @@ textarea:focus {
     inset-block-start: 0;
   }
 
+  .profile-image > .circle {
+    right: -1.9rem;
+  }
+
   .intro {
     position: relative;
-
-    margin-top: auto;
 
     display: flex;
 
@@ -525,6 +579,11 @@ textarea:focus {
 
   .xp-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .xp-container > .rings {
+    right: -1.9rem;
+    width: 198px;
   }
 
   .xp-card {
@@ -572,6 +631,10 @@ textarea:focus {
     padding-inline: 2rem;
   }
 
+  .lg-hidden {
+    display: none;
+  }
+
   .profile-card {
     --image-width: 28rem;
   }
@@ -580,6 +643,37 @@ textarea:focus {
     width: var(--image-width);
 
     inset-inline-end: 0;
+  }
+
+  .profile-image > .circle {
+    right: auto;
+    width: 129px;
+    left: -129px;
+    bottom: 129px;
+  }
+
+  .intro {
+    justify-content: center;
+  }
+
+  .rings-container {
+    display: grid;
+    grid-template-columns: 1fr minmax(62rem, 1fr) 1fr 1fr;
+
+    position: absolute;
+    width: 100vw;
+    max-width: 1920px;
+
+    inset-inline: -25%;
+    margin-inline: auto;
+
+    bottom: -100px;
+
+    overflow: hidden;
+  }
+
+  .rings-container > .rings {
+    grid-column: 3 / 4;
   }
 
   .projects-container > header {
@@ -611,6 +705,8 @@ textarea:focus {
     column-gap: 14rem;
 
     text-align: left;
+
+    position: relative;
   }
 
   .contact-container > div > p {
