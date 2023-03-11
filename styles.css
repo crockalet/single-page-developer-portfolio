@@ -1,0 +1,737 @@
+@supports not (font-variation-settings: normal) {
+  @font-face {
+    font-family: SpaceGrotesk;
+    src: url("/assets/fonts/static/SpaceGrotesk-Medium.ttf");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: SpaceGrotesk;
+    src: url("/assets/fonts/static/SpaceGrotesk-Bold.ttf");
+    font-weight: bold;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "SpaceGrotesk";
+    src: url("/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
+        format("woff2 supports variations"),
+      url("/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
+        format("woff2-variations");
+    font-weight: 500 700;
+  }
+}
+
+:root {
+  --font-space-grotesk: SpaceGrotesk, sans-serif;
+  --black: hsl(0, 0%, 8%);
+  --dark-gray: hsl(0, 0%, 14%);
+  --gray: hsl(0, 0%, 85%);
+  --green: hsl(153, 71%, 59%);
+  --danger: hsl(2, 100%, 68%);
+  --white: hsl(0, 0%, 100%);
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+.text-m {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-lg {
+  font-size: 3rem;
+  letter-spacing: -1.5px;
+  line-height: 3.5rem;
+}
+
+.text-xl {
+  font-size: 5.5rem;
+  letter-spacing: -2.5px;
+  line-height: 5.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-size: 13px;
+}
+
+main,
+header,
+footer .content {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+main,
+header {
+  position: relative;
+}
+
+header {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  padding-block: 1.5rem;
+  padding-block-end: 0;
+
+  row-gap: 1.5rem;
+
+  z-index: 1;
+}
+
+header > p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header .icons,
+footer .icons {
+  display: flex;
+
+  column-gap: 1.5rem;
+}
+
+a:visited {
+  color: inherit;
+}
+
+header .icons a,
+footer .icons a {
+  width: 1.5rem;
+
+  aspect-ratio: 1;
+  line-height: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  background-color: var(--black);
+  color: var(--white);
+
+  font-family: var(--font-space-grotesk);
+  font-weight: 500;
+}
+
+button,
+.links > a {
+  border: none;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2.25px;
+
+  padding: 1rem;
+
+  transition: color 300ms ease-in-out;
+}
+
+button:hover,
+.links > a:hover,
+.icons > a:hover {
+  cursor: pointer;
+  color: var(--green);
+}
+
+button,
+mark,
+.links > a {
+  background-color: transparent;
+  color: inherit;
+  position: relative;
+}
+
+mark::after,
+button::after,
+.links > a::after {
+  content: "";
+
+  position: absolute;
+  inset-inline: 1.1rem;
+  bottom: 0;
+
+  height: 4px;
+  background-color: var(--green);
+}
+
+mark::after {
+  inset-inline: 0;
+  inset-inline-end: 0.8rem;
+}
+
+button::after,
+.links > a::after {
+  height: 2px;
+}
+
+.rings {
+  opacity: 0.45;
+}
+
+header .rings,
+.profile-card .rings {
+  position: absolute;
+
+  width: 530px;
+
+  bottom: calc((2.5rem + 129px) * -1);
+  left: -342px;
+}
+
+.profile-card {
+  --top-offset: 6.2rem;
+  text-align: center;
+
+  position: relative;
+  top: calc(-1 * var(--top-offset));
+}
+
+.profile-card .rings {
+  top: calc(2rem + var(--top-offset));
+  bottom: auto;
+
+  z-index: -5;
+}
+
+.profile-image > .circle {
+  position: absolute;
+
+  bottom: 0;
+  right: -1rem;
+
+  width: 64px;
+  height: 129px;
+
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  z-index: -1;
+
+  position: relative;
+}
+
+.profile-image > img {
+  width: 12rem;
+}
+
+.intro > h1 {
+  margin-block-start: 3rem;
+}
+
+.intro > h1 > mark {
+  display: inline-block;
+
+  width: max-content;
+}
+
+.intro > p {
+  color: var(--gray);
+}
+
+.intro > button,
+.intro > p {
+  margin-block-start: 1.8rem;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--white);
+}
+
+.xp-container {
+  margin-block: 3.3rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  row-gap: 2rem;
+
+  position: relative;
+}
+
+.xp-container > .rings {
+  position: absolute;
+
+  bottom: -100px;
+  right: -1rem;
+
+  width: 186px;
+  overflow: hidden;
+}
+
+.xp-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.xp-card > p {
+  color: var(--gray);
+}
+
+.projects-container {
+  margin-block: 6rem;
+}
+
+.projects-container > header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 0;
+}
+
+.projects {
+  margin-block: 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  column-gap: 2rem;
+  row-gap: 3rem;
+}
+
+.project-card > .project-image {
+  position: relative;
+
+  aspect-ratio: 1.35;
+}
+
+.profile-card > h3 {
+  margin-top: 1.5rem;
+}
+
+.project-card > .tech {
+  margin-top: 0.75rem;
+
+  display: flex;
+  column-gap: 1.25rem;
+}
+
+.project-card > .tech > li {
+  color: var(--gray);
+}
+
+.project-card > .links {
+  margin-top: 0.75rem;
+
+  display: flex;
+  column-gap: 2rem;
+}
+
+.project-card > .links > a {
+  padding-inline: 0;
+}
+
+.project-image > .links {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  aspect-ratio: 1.35;
+
+  background-color: rgba(0, 0, 0, 0.75);
+
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  row-gap: 2.75rem;
+
+  display: none;
+}
+
+footer {
+  background-color: var(--dark-gray);
+  padding-block-start: 5rem;
+  margin-block-start: 6rem;
+}
+
+.contact-container {
+  display: flex;
+
+  align-items: center;
+
+  text-align: center;
+
+  flex-direction: column;
+
+  padding-block-end: 5rem;
+}
+
+.contact-container > * {
+  max-width: 34rem;
+  width: 100%;
+}
+
+.contact-container > div > p {
+  margin-block: 1.5rem;
+}
+
+.contact-container > form {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 2.5rem;
+}
+
+.developer {
+  display: flex;
+
+  flex-direction: column;
+
+  padding-block-start: 3rem;
+  padding-block-end: 4.5rem;
+
+  justify-content: space-between;
+  align-items: center;
+
+  row-gap: 1.5rem;
+}
+
+.input-container > label {
+  display: none;
+}
+
+form > button[type="submit"] {
+  margin-left: auto;
+}
+
+input,
+textarea {
+  width: 100%;
+
+  color: var(--white);
+  background-color: transparent;
+
+  border: none;
+
+  padding-inline: 1.2rem;
+  padding-block-end: 1.5rem;
+
+  border-block-end: 1px solid var(--white);
+
+  caret-color: var(--white);
+}
+
+input,
+input::placeholder,
+textarea,
+textarea::placeholder {
+  font-family: var(--font-space-grotesk);
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--dark-gray) inset !important;
+  -webkit-text-fill-color: var(--white) !important;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.sm-hidden {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  main,
+  header,
+  footer .content {
+    padding-inline: 1.9rem;
+  }
+
+  header {
+    flex-direction: row;
+
+    justify-content: space-between;
+  }
+
+  mark::after {
+    height: 6px;
+  }
+
+  .projects-container > header {
+    padding-inline: 0;
+  }
+
+  .profile-card {
+    --image-width: 24.75rem;
+    text-align: left;
+
+    display: grid;
+
+    grid-template-columns: 1fr calc(var(--image-width) - 5rem);
+  }
+
+  .sm-hidden {
+    display: block;
+  }
+
+  .profile-image {
+    order: 1;
+
+    position: relative;
+
+    margin: 0;
+
+    width: 100%;
+    aspect-ratio: 0.43;
+  }
+
+  .profile-image > img {
+    width: var(--image-width);
+
+    position: absolute;
+
+    inset-inline-end: -1.9rem;
+    inset-block-start: 0;
+  }
+
+  .profile-image > .circle {
+    right: -1.9rem;
+  }
+
+  .intro {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .intro > h1 {
+    font-size: 5.5rem;
+    line-height: 6.6rem;
+    letter-spacing: -1px;
+
+    margin-block-start: 0;
+  }
+
+  .intro > p {
+    font-size: 1.25rem;
+    line-height: 2.15rem;
+    letter-spacing: 0;
+
+    max-width: 34rem;
+
+    margin-block-start: 4.5rem;
+  }
+
+  .intro > button {
+    margin-block-start: 2.5rem;
+    padding-inline: 0;
+  }
+
+  .intro > button::after {
+    inset-inline: 0;
+  }
+
+  .xp-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .xp-container > .rings {
+    right: -1.9rem;
+    width: 198px;
+  }
+
+  .xp-card {
+    align-items: flex-start;
+  }
+
+  .md-hidden {
+    display: none;
+  }
+
+  .md-text-xl {
+    font-size: 5.5rem;
+    letter-spacing: -2.5px;
+    line-height: 5.5rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-container > div > p {
+    margin-block-end: 3.5rem;
+  }
+
+  .developer {
+    flex-direction: row;
+
+    padding-block-start: 1.75rem;
+    padding-block-end: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 16px;
+  }
+
+  main,
+  header,
+  footer .content {
+    padding-inline: 5.25rem;
+  }
+
+  header .icons {
+    padding-inline: 2rem;
+  }
+
+  .lg-hidden {
+    display: none;
+  }
+
+  .profile-card {
+    --image-width: 28rem;
+  }
+
+  .profile-image > img {
+    width: var(--image-width);
+
+    inset-inline-end: 0;
+  }
+
+  .profile-image > .circle {
+    right: auto;
+    width: 129px;
+    left: -129px;
+    bottom: 129px;
+  }
+
+  .intro {
+    justify-content: center;
+  }
+
+  .rings-container {
+    display: grid;
+    grid-template-columns: 1fr minmax(62rem, 1fr) 1fr 1fr;
+
+    position: absolute;
+    width: 100vw;
+    max-width: 1920px;
+
+    inset-inline: -25%;
+    margin-inline: auto;
+
+    bottom: -100px;
+
+    overflow: hidden;
+  }
+
+  .rings-container > .rings {
+    grid-column: 3 / 4;
+  }
+
+  .projects-container > header {
+    padding-inline: 0;
+  }
+
+  .project-card > .links {
+    display: none;
+  }
+
+  .project-image > .links {
+    display: flex;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 300ms ease-out;
+  }
+
+  .project-card:hover > .project-image > .links,
+  .project-card:focus > .project-image > .links {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .contact-container {
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 14rem;
+
+    text-align: left;
+
+    position: relative;
+  }
+
+  .contact-container > div > p {
+    margin-block-start: 2.125rem;
+  }
+
+  .developer {
+    padding-block-start: 3rem;
+    padding-block-end: 6rem;
+  }
+
+  input,
+  input::placeholder,
+  textarea,
+  textarea::placeholder {
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    padding-inline: 1rem;
+    padding-block-end: 1rem;
+  }
+
+  .xl-hidden {
+    display: none;
+  }
+}
