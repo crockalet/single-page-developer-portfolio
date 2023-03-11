@@ -1,13 +1,13 @@
 @supports not (font-variation-settings: normal) {
   @font-face {
     font-family: SpaceGrotesk;
-    src: url("/assets/fonts/static/SpaceGrotesk-Medium.ttf");
+    src: url("assets/fonts/static/SpaceGrotesk-Medium.ttf");
     font-weight: 500;
   }
 
   @font-face {
     font-family: SpaceGrotesk;
-    src: url("/assets/fonts/static/SpaceGrotesk-Bold.ttf");
+    src: url("assets/fonts/static/SpaceGrotesk-Bold.ttf");
     font-weight: bold;
   }
 }
@@ -15,9 +15,9 @@
 @supports (font-variation-settings: normal) {
   @font-face {
     font-family: "SpaceGrotesk";
-    src: url("/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
+    src: url("assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
         format("woff2 supports variations"),
-      url("/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
+      url("assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
         format("woff2-variations");
     font-weight: 500 700;
   }
